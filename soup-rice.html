@@ -26,14 +26,12 @@
             text-shadow: 0 0 10px rgba(255, 182, 193, 0.3);
         }
 
-        /* --- THE BOUQUET CANVAS SYSTEM --- */
         .bouquet-container {
             position: relative;
             width: 500px;
             height: 600px;
         }
 
-        /* --- BACKGROUND PACKAGING LAYER --- */
         .bouquet-paper {
             position: absolute;
             top: 0px;
@@ -43,7 +41,6 @@
             z-index: 1;
         }
 
-        /* --- CORNER RIBBON LAYER --- */
         .bouquet-ribbon {
             position: absolute;
             bottom: -55px;
@@ -53,13 +50,11 @@
             z-index: 30;
         }
 
-        /* --- STYLING THE FLOWER IMAGE LINKS --- */
         .flower-link {
             position: absolute;
             display: inline-block;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             z-index: 10;
-            /* Applies a continuous gentle floating animation */
             animation: gentleFloat 4s ease-in-out infinite;
         }
 
@@ -72,54 +67,45 @@
             box-shadow: 0 8px 20px rgba(0,0,0,0.6);
         }
 
-        /* Hover effect: Makes flowers bloom slightly when hovered */
         .flower-link:hover {
             transform: scale(1.15) translateY(-5px) !important;
             z-index: 50 !important; 
-            animation-play-state: paused; /* Pauses float motion while interacting */
+            animation-play-state: paused;
         }
 
-        /* --- CSS SWAYING ANIMATION KEYFRAMES --- */
         @keyframes gentleFloat {
             0% { transform: translateY(0px) rotate(0deg); }
             50% { transform: translateY(-10px) rotate(1.5deg); }
             100% { transform: translateY(0px) rotate(0deg); }
         }
 
-        /* --- STAGGERED ANIMATION DELAYS (Breathes life into the bunch) --- */
         .delay-1 { animation-delay: 0.0s; }
         .delay-2 { animation-delay: 0.4s; }
         .delay-3 { animation-delay: 0.8s; }
         .delay-4 { animation-delay: 1.2s; }
         .delay-5 { animation-delay: 1.6s; }
 
-        /* --- RADIAL BOUQUET COORDINATES (18 FLOWER SLOTS) --- */
-        /* Row 1 - Highest Arc Backing (5 Flowers) */
         .f-row1-1 { top: -20px; left: 30px; }
         .f-row1-2 { top: -45px; left: 120px; }
         .f-row1-3 { top: -55px; left: 210px; }
         .f-row1-4 { top: -45px; left: 300px; }
         .f-row1-5 { top: -20px; left: 390px; }
 
-        /* Row 2 - Upper Middle Density (5 Flowers) */
         .f-row2-1 { top: 55px; left: 45px; z-index: 11; }
         .f-row2-2 { top: 40px; left: 135px; z-index: 11; }
         .f-row2-3 { top: 35px; left: 225px; z-index: 11; }
         .f-row2-4 { top: 40px; left: 315px; z-index: 11; }
         .f-row2-5 { top: 55px; left: 405px; z-index: 11; }
 
-        /* Row 3 - Mid-Core Focal Layer (4 Flowers) */
         .f-row3-1 { top: 130px; left: 85px; z-index: 12; }
         .f-row3-2 { top: 115px; left: 175px; z-index: 12; }
         .f-row3-3 { top: 115px; left: 265px; z-index: 12; }
         .f-row3-4 { top: 130px; left: 355px; z-index: 12; }
 
-        /* Row 4 - Narrow Lower Cluster (3 Flowers) */
         .f-row4-1 { top: 210px; left: 125px; z-index: 13; }
         .f-row4-2 { top: 195px; left: 215px; z-index: 13; }
         .f-row4-3 { top: 210px; left: 305px; z-index: 13; }
 
-        /* Row 5 - Tucked Anchor Flower (1 Center Flower) */
         .f-row5-1 { top: 275px; left: 215px; z-index: 14; }
 
 	 @media (max-width: 550px) {
@@ -128,16 +114,16 @@
                 margin-bottom: 10px;
             }
             .bouquet-wrapper {
-                height: 440px; /* Shrinks container window height boundary */
+                height: 440px; 
             }
             .bouquet-container {
-                transform: scale(0.70); /* Uniformly compresses bouquet size for smaller viewports */
+                transform: scale(0.70); 
             }
         }
 
         @media (max-width: 380px) {
             .bouquet-container {
-                transform: scale(0.58); /* Compresses layout further for tight mobile viewports */
+                transform: scale(0.58); 
             }
         }
 
@@ -148,13 +134,13 @@
     <h2>🌸 tadaaa! here are your 18 beautiful flowers!! 🌸</h2>
 
     <div class="bouquet-container">
-        <!-- Wrapping Paper Cone Background -->
+       
         <img class="bouquet-paper" src="https://png.pngtree.com/png-clipart/20231107/ourmid/pngtree-paper-bouquets-png-image_10499267.png" alt="Wrapping Paper">
         
-        <!-- Ribbon Tie Overlay -->
+
         <img class="bouquet-ribbon" src="https://static.vecteezy.com/system/resources/thumbnails/042/235/415/small/watercolor-red-coquette-ribbon-illustration-hand-drawn-girly-bow-accessory-item-clipart-png.png" alt="Ribbon Bow">
 
-        <!-- ROW 1 (Top Backdrop Arc) -->
+   
         <a href="Rose.html" class="flower-link f-row1-1 delay-1">
             <img src="https://images.stockcake.com/public/d/8/e/d8e9c3e7-bd98-4399-872a-df4322558c42_large/dewy-red-rose-stockcake.jpg" alt="Red Rose">
         </a>
@@ -171,7 +157,7 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9PlIPBPzpVzhToKUrncWHzEH5UL8r2P5RZWVqxmFUyw&s=10" alt="Daisy">
         </a>
 
-        <!-- ROW 2 (Upper Mid Overlay) -->
+    
         <a href="Begonia.html" class="flower-link f-row2-1 delay-2">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2z5eBqMkjnlJtWyw5QX_BzlBP_O7tw6ZglFqLAag1f5DjGdy2CQvdG-T1&s=10" alt="Begonia">
         </a>
@@ -188,7 +174,7 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5Cbl198wPfJCvhlDmGRnySXbvzTxGtWSEpydQWcpXrPxr7bccbVtTPVc&s=10" alt="Clematis">
         </a>
 
-        <!-- ROW 3 (Heart Core Layer) -->
+     
         <a href="Anemone.html" class="flower-link f-row3-1 delay-3">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSE9UeFpZpm1bX418rM6R2CrZlgwdlY9kY8bx3DKKh6PB9kDQFoo6Rc2RA&s=10" alt="Anemone">
         </a>
@@ -202,7 +188,7 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-X5HKa9AgTVDJOPRxs5wKrybXdoMtLyASEIBKpu6duA&s=10" alt="Chrysanthemum">
         </a>
 
-        <!-- ROW 4 (Lower Stem Wrap) -->
+   
         <a href="Snapdragon.html" class="flower-link f-row4-1 delay-4">
             <img src="https://www.bloomingpatchesfarm.com/cdn/shop/articles/IMG_20250503_185119.png?v=1746312702" alt="Snapdragon">
         </a>
@@ -213,7 +199,7 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJAgMisJxdi7jpBmHFKSCZ9S52Tle60tnSeofXpkQDrQ&s=10" alt="Magnolia">
         </a>
 
-        <!-- ROW 5 (Bottom Anchor Node) -->
+       
         <a href="Lotus.html" class="flower-link f-row5-1 delay-1">
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-lGEAAOsOTWnc1J4HSlEdCGgMWh8VCvKnkc68g4B6Qg&s=10" alt="Lotus">
         </a>
