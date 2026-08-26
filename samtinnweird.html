@@ -20,20 +20,19 @@
             min-height: 100vh;
         }
 
-        /* --- THE CORE LAYOUT WRAPPER --- */
+
         .split-screen-container {
-            display: flex;             /* Triggers horizontal side-by-side layout */
-            flex-direction: column;       /* Places items left-to-right */
-            align-items: center;       /* Centers both sections vertically */
-            justify-content: space-between; /* Creates breathing room between text and art */
+            display: flex;             
+            flex-direction: column;       
+            align-items: center;       
+            justify-content: space-between; 
             max-width: 1100px;
             width: 95%;
-            gap: 40px;                 /* Adds a clean space barrier between columns */
+            gap: 40px;                 
         }
 
-        /* --- LEFT SIDE: THE TEXT CARD --- */
         .text-column {
-            flex: 40%;                   /* Tells text card to fill 50% width dynamically */
+            flex: 40%;                   
             background-color: #1f2833;
             padding: 40px;
             border-radius: 15px;
@@ -66,16 +65,15 @@
             animation: blink 0.7s infinite;
         }
 
-        /* --- RIGHT SIDE: THE PORTRAIT CONTAINER --- */
         .art-column {
-            flex: 1;                   /* Tells art card to fill the other 50% width */
+            flex: 1;                  
             display: flex;
-            justify-content: center;   /* Anchors art layout straight to the center */
+            justify-content: center;   
         }
 
         .art-printer {
             font-family: monospace;
-            font-size: 8px;            /* Keeps your raw text art small and un-wrapped */
+            font-size: 8px;            
             line-height: 1.1;
             background-color: #000000;
             font-weight: bold;
@@ -85,20 +83,19 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
             overflow: hidden;
             
-            /* Slide down printer animation */
             max-height: 0;
             animation: printArt 10s ease-out forwards;
-            animation-delay: 10s;      /* Brief pause before art reveals */
+            animation-delay: 10s;      
         }
 
-/* --- 📱 MOBILE RESPONSIVE ENGINE (Screens smaller than 768px) --- */
+
         @media (max-width: 768px) {
             body {
                 padding: 15px;
             }
 
             .split-screen-container {
-                flex-direction: column; /* Stacks text on top, art on bottom */
+                flex-direction: column; 
                 gap: 20px;
             }
 
@@ -119,16 +116,16 @@
                 padding: 10px;
             }
 
-            /* Scales down ASCII characters so they fit mobile screen widths */
+           
             #tiresult {
                 font-size: 5.5px; 
                 --fs: 5.5px;
             }
         }
-        /* --- CODE ANIMATION BLUEPRINTS --- */
+    
         @keyframes printArt {
             0% { max-height: 0px; }
-            100% { max-height: 1300px; } /* Adjust higher if your image cuts off */
+            100% { max-height: 1300px; } 
         }
 
         @keyframes blink {
