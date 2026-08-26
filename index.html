@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/jpeg" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTirV7AQXJy1FPujlo5m80Rup5O22nBJ3nJ-7RMQEtjRw&s=10">
+    <title>HIIII, SHOBE</title>
+    <style>
+        body {
+            background-color: #0b0c10;
+            color: #c5c6c7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h2 {
+            font-size: 24px;
+	color: #ffffff;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        .wrapper-container {
+            width: 350px;
+            height: 80px;
+            position: relative;
+        }
+
+        .btn {
+            font-weight: bold;
+            text-transform: uppercase;
+            border-radius: 30px;
+            cursor: pointer;
+            position: absolute;
+            box-sizing: border-box;
+            white-space: nowrap;
+        }
+
+        .unravel-btn {
+            padding: 15px 40px;
+            font-size: 18px;
+            background: transparent;
+            color: #ffb6c1;
+            border: 2px solid #ffffff;
+            box-shadow: 0 0 15px rgba(69, 243, 255, 0.2);
+            left: 10px;
+            top: 20px;
+            display: block !important;
+            transform-origin: center center;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s;
+            transform: scale(1);
+            z-index: 10;
+        }
+
+        .unravel-btn:hover {
+            background-color: #ffb6c1;
+            color: #ffffff;
+            box-shadow: 0 0 25px rgba(69, 243, 255, 0.6);
+        }
+
+        .runaway-btn {
+            color: #ff4545;
+            background: transparent;
+            border: 2px solid #ff4545;
+            box-shadow: 0 0 15px rgba(255, 69, 69, 0.2);
+            right: 20px;
+            top: 20px;
+            width: 130px !important;
+            height: 55px !important;
+            padding: 0 !important;
+            font-size: 18px;
+            text-align: center;
+            
+            transition: left 0.1s ease, top 0.1s ease, font-size 0.2s ease;
+            z-index: 5;
+        }
+
+        .runaway-btn:hover {
+            background-color: #ff4545;
+            color: #ffffff;
+            box-shadow: 0 0 25px rgba(255, 69, 69, 0.6);
+        }
+		
+		@media (max-width: 360px) {
+            h2 {
+                font-size: 17px;
+            }
+            .unravel-btn {
+                padding: 12px 25px;
+                font-size: 14px;
+            }
+            .runaway-btn {
+                width: 95px !important;
+                height: 45px !important;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+<img src="https://64.media.tumblr.com/82482b7c6da49d17b88f8581aef7dd9a/tumblr_ofcylg6zAJ1vqc713o1_500.gif" alt="Image tagged with patrick gif, patrick star gif, Patrick – @spongebob-squarepants-is-my-hero on Tumblr
+">
+    <h2>uhm, open this if u want to know my simple present for ya...</h2>
+    
+    <div class="wrapper-container">
+        
+ 
+        <a href="samtinnwerid.html" style="text-decoration: none;">
+
+            <button class="btn unravel-btn" id="yes-btn">ihh, okii</button>
+        </a>
+
+
+        <button class="btn runaway-btn" id="no-btn" onmouseover="escapeMouse()" onclick="escapeMouse()">Ayoko</button>
+
+    </div>
+
+    <script>
+
+        let yesScale = 1.0;
+        let noFontSize = 18;
+
+        function escapeMouse() {
+            const btnNo = document.getElementById('no-btn');
+            const btnYes = document.getElementById('yes-btn');
+            
+
+            btnNo.style.position = 'fixed';
+            const maxX = window.innerWidth - btnNo.offsetWidth - 30;
+            const maxY = window.innerHeight - btnNo.offsetHeight - 30;
+            const randomX = Math.floor(Math.random() * maxX);
+            const randomY = Math.floor(Math.random() * maxY);
+            btnNo.style.left = randomX + 'px';
+            btnNo.style.top = randomY + 'px';
+            
+
+            if (noFontSize > 8) {
+                noFontSize -= 2;
+                btnNo.style.fontSize = noFontSize + 'px';
+            }
+
+            yesScale += 0.35;
+            btnYes.style.transform = `scale(${yesScale})`;
+        }
+    </script>
+
+</body>
+</html>
